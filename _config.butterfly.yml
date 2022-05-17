@@ -1,22 +1,22 @@
+--- # --------------------------------------
+
 # Main menu navigation (導航目錄)
 # see https://butterfly.js.org/posts/4aa8abbe/#導航菜單
-# --------------------------------------
-
 menu:
-  Home: / || fas fa-home
-  Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
+  首页: / || fas fa-home
+  时间轴: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  放松||fas fa-list:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+  快乐站点: /link/ || fas fa-link
+  追番: /bangumis/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: darker #light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -76,7 +76,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon:  /image/hello.jpg #/img/favicon.png
+favicon: /image/hello.jpg #/img/favicon.png
 
 # Avatar (頭像)
 avatar:
@@ -87,30 +87,30 @@ avatar:
 disable_top_img:
 
 # 首页的横幅图片 The banner image of home page
-index_img: /image/star.jpg
+index_img: https://wkphoto.cdn.bcebos.com/730e0cf3d7ca7bcb00fbda4aae096b63f724a8d6.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
 
 # The banner image of archive page
-archive_img: /image/star.jpg
+archive_img: https://pic.imgdb.cn/item/626f3a2a239250f7c525fbea.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: /image/star.jpg
+tag_img: https://wkphoto.cdn.bcebos.com/2934349b033b5bb5750c9f9b26d3d539b700bcf8.jpg
 
 # The banner image of tag page
 # format:
 #  - tag name: xxxxx
-tag_per_img: 
+tag_per_img: https://pic.imgdb.cn/item/626f3a2a239250f7c525fbea.jpg
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: 
+category_img: https://pic.imgdb.cn/item/626f3a2a239250f7c525fbea.jpg
 # The banner image of category page
 # format:
 #  - category name: xxxxx
-category_per_img: 
+category_per_img: https://pic.imgdb.cn/item/626f3a2a239250f7c525fbea.jpg
 
 cover:
   # display the cover or not (是否顯示文章封面)
@@ -121,7 +121,7 @@ cover:
   # left/right/both
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: /image/star.jpg
+  default_cover:
     # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
@@ -132,7 +132,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: false
-  subtitle: 'Page Not Found'
+  subtitle: "Page Not Found"
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
 post_meta:
@@ -288,7 +288,7 @@ livere:
 
 # gitalk
 # https://github.com/gitalk/gitalk
-gitalk: 
+gitalk:
   client_id:
   client_secret:
   repo:
@@ -524,7 +524,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -694,9 +694,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '簡'
+  msgToSimplifiedChinese: "簡"
 
 # Read Mode (閲讀模式)
 readmode: true
@@ -782,8 +782,8 @@ aplayerInject:
 snackbar:
   enable: false
   position: bottom-left
-  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
-  bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
+  bg_light: "#49b1f5" # The background color of Toast Notification in light mode
+  bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)
@@ -826,7 +826,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+  # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
 
@@ -893,3 +893,25 @@ CDN:
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
+
+    live2d: # xxxxxxxxx
+  enable: true
+  scriptFrom: local
+  model:
+    # 这是白猫的模型
+    use: live2d-widget-model-tororo
+  display:
+    # 设置模型的位置
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true # 手机显示开关，建议关闭
+
+bangumi:
+  enable: true #是否启用
+  vmid: 65267175 #哔哩哔哩番剧页面的 vmid(uid), 如何获取
+  title: "追番列表" #该页面的标题
+  quote: "生命不息，追番不止！" #写在页面开头的一段话，支持 html 语法
+  show: 1 #初始显示页面：0: 想看 , 1: 在看 , 2: 看过，默认为 1
+  loading: "/image/hello.jpg" #图片加载完成前的 loading 图片

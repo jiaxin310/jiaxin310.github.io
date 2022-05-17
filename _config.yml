@@ -5,16 +5,17 @@
 # Site
 title: Xin's base
 subtitle: "简简单单的快乐"
-description: "♥的小基地"
+description: "♥'s 小基地"
 keywords: 小兔子
-author: +xinLee
+author: +xin Lee
 language: zh-CN
 timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://jiaxin310.github.io/
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/ #后缀名减少
+#:year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -105,19 +106,43 @@ deploy:
   type: git
   repo: https://github.com/jiaxin310/jiaxin310.github.io.git
   branch: gh-pages
-# Search
-## See: https://github.com/theme-next/hexo-generator-searchdb
-# search:
-#   path: search.json
-#   field: post
-#   content: true
-#   format: striptags
 
-# #Mathjax
-# mathjax:
-#   tags: none               # or 'ams' or 'all'
-#   single_dollars: true     # enable single dollar signs as in-line math delimiters
-#   cjk_width: 0.9           # relative CJK char width
-#   normal_width: 0.6        # relative normal (monospace) width
-#   append_css: true         # add CSS to every page
-#   every_page: false        # if true, every page will be rendered by mathjax regardless the `mathjax` setting in Front-matter of each article
+live2d: #xxxxxxxxx
+  enable: true
+  scriptFrom: local
+  model:
+    # 这是白猫的模型
+    use: live2d-widget-model-tororo
+  display:
+    # 设置模型的位置
+    position: left
+    width: 150
+    height: 300
+  mobile:
+    show: true # 手机显示开关，建议关闭
+
+    
+bangumi:
+  enable: true #是否启用
+  vmid: 65267175 #哔哩哔哩番剧页面的 vmid(uid), 如何获取
+  title: "追番列表" #该页面的标题
+  quote: "休息的小天地~" #写在页面开头的一段话，支持 html 语法
+  show: 1 #初始显示页面：0: 想看 , 1: 在看 , 2: 看过，默认为 1
+  loading: "/image/hello.jpg" #图片加载完成前的 loading 图片
+
+# #那年今日
+#   history_calendar:
+#     priority: 4   #插件叠放顺序 数字越大 叠放越靠前
+#     enable: true  #是否开启
+#     enable_page: all  #路由地址 all代表全局开启 如主页代表
+#     layout:  #含义：如果说 history_calendar 是一幅画，那么这个 layout 就是指定了哪面墙来挂画而在 HTML 的是世界里有两种墙 分别type 为 id 和 class。其中在定义 class 的时候会出现多个 class 的情况，这时就需要使用 index，确定是哪一个。最后墙的名字即是 name;
+#       type: class  #（class&id）
+#       name: sticky_layout
+#       index: 1  #（数字）
+#   temple_html: '<div class="card-widget card-history"> <!-- 挂载容器 --> <div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"> <!-- 挂载器 --> <div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>'   #含义：包含挂载容器
+
+#   # Livere comment configuration, the default is not activated
+# # Livere 来必力评论模块的配置，默认为不激活
+# livere:
+#   enable: true   # true即为开启评论系统
+#   uid: MTAyMC81NjQzNS8zMjg5OA== #这里填写你的uid
